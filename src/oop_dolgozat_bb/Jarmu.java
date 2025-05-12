@@ -17,6 +17,22 @@ public abstract class Jarmu {
         this.aktualsebesseg = aktualsebesseg;
         this.rendszam = rendszam;
     }
+    
+    public int getAktualsebesseg() {
+        return aktualsebesseg;
+    }
+
+    public void setAktualsebesseg(int aktualsebesseg) {
+        this.aktualsebesseg = aktualsebesseg;
+    }
+
+    public String getRendszam() {
+        return rendszam;
+    }
+
+    public void setRendszam(String rendszam) {
+        this.rendszam = rendszam;
+    }
 
     public abstract boolean gyorshajtottE(int sebessegkorlat);
     
