@@ -9,6 +9,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.io.File;
 
 
 /**
@@ -56,15 +57,21 @@ public class OOP_Dolgozat_BB {
        
     
     public static void kiketMertunkBe(){
-     while((sor = reader.readLine()) != null){
+     for(Robogo r : jarmuvek){
          try {
       FileWriter ujfajl = new FileWriter("buntetes.txt");
-      ujfajl.write(jarmuvek);
+      ujfajl.write("Robogó: " + rendszam + aktualissebesseg + maximumsebesseg);
       ujfajl.close();
-      System.out.println("Successfully wrote to the file.");
     } catch (IOException e) {
       System.out.println("Hiba");
 
        }
+       for(AudiS8 a : jarmuvek){
+         try {
+      FileWriter ujfajl = new FileWriter("buntetes.txt");
+      ujfajl.write("Audi: " + rendszam + aktualissebesseg + maximumsebesseg + lezerblokkolo);
+      ujfajl.close();
+    } catch (IOException e) {
+      System.out.println("Hiba");
     }
 }
